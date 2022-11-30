@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+    <center>
+        <h2 style="background-color: whitesmoke;">Statistika</h2>  
+    </center>
+    
+    
+    <p></p>
+    <center><img src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2021/07/13/3581449600.jpg" alt="Logo Untirta" width="500px"></center>
+    <p></p>
+    
+    <h4 style="background-color: rgba(30, 112, 135, 0.568) ;">Materi</h4>
+    <p style="font-family: 'times new roman'">Statistika adalah ilmu yang mempelajari semua hal tentang data, mulai pengumpulan, penyajian, analisis, sampai terbentuk suatu kesimpulan. Statistika merupakan ilmu yang harus dikuasai karena everything need statistics. </p>
+    <p style="font-family: 'times new roman'">Contohnya, menghitung rata-rata nilai ujian, menentukan banyaknya siswa yang suka membolos, menghitung tingkat kepatuhan siswa pada peraturan sekolah, menghitung tingkat penularan Covid-19 di suatu lokasi, menentukan laju inflasi, dan masih banyak lainnya.</p>
+    
+    
+    
+    <p>
+    {% for judul in jdl %}
+        <li>{{ judul }}</li>
+    {% endfor %}
+    </p>
+
+    <P></P>
+    <center>
+        <button style="background-color: rgba(24, 107, 128, 0.831)" onclick="goBack()">Back To</button>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    </center>
+    
+    <p></p> 
+
+{% endblock %}
